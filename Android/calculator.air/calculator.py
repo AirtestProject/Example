@@ -6,13 +6,14 @@ __desc__ = """this is a test script."""
 # start your script here
 
 from poco.drivers.android.uiautomation import AndroidUiautomationPoco
+from airtest.core.api import *
 
 PKG = "com.google.android.calculator"
 if PKG not in device().list_app():
     import os
     path = os.path.join(args.script, "com.google.android.calculator.apk")
     device().install_app(path)
-                
+
 stop_app(PKG)
 start_app(PKG)
 

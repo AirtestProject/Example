@@ -1,9 +1,9 @@
 # -*- encoding=utf8 -*-
-__author__ = "gzliuxin"
-__title__ = "test script title"
-__desc__ = """
-this is a test script.
-"""
+__author__ = "liuxin"
+
+from airtest.core.api import *
+
+auto_setup(__file__)
 
 # install demo apk
 PKG = "com.NetEase.PocoDemo"
@@ -32,7 +32,7 @@ assert_equal(bool(result), False)
 poco(type="InputField").set_text("Hello World")
 sleep(1.0)
 
-# assert text 
+# assert text
 result = poco(type="Text", name="Text").get_text()
 assert_equal(result, "Hello World")
 

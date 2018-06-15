@@ -2,6 +2,7 @@
 
 __author__ = "刘欣"
 
+from airtest.core.api import *
 import os
 
 PWD = args.script
@@ -23,3 +24,4 @@ p = wait(Template(r"tpl1499240490986.png", record_pos=(-0.443, -0.273), resoluti
 touch(p)
 sleep(2)
 stop_app(PKG)
+
